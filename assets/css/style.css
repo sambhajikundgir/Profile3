@@ -334,16 +334,18 @@ h6 {
   
   /* Mobile hero background image adjustments */
   #hero {
-    background-position: center right;
-    background-size: cover;
+    background-position: center right !important;
+    background-size: cover !important;
+    background-repeat: no-repeat !important;
   }
   
   /* Mobile about section image adjustments */
   .about .about-pic {
     width: 100% !important;
     height: auto !important;
-    margin: 0 auto 20px auto;
-    display: block;
+    margin: 0 auto 20px auto !important;
+    display: block !important;
+    max-width: 300px !important;
   }
 }
 
@@ -352,7 +354,14 @@ h6 {
   .about .about-pic {
     width: 80% !important;
     height: auto !important;
-    margin: 0 auto 20px auto;
+    margin: 0 auto 20px auto !important;
+    max-width: 400px !important;
+  }
+  
+  /* Ensure hero background is visible on tablets */
+  #hero {
+    background-position: center right !important;
+    background-size: cover !important;
   }
 }
 

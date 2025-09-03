@@ -127,6 +127,16 @@ h6 {
   overflow-y: auto;
 }
 
+.site-logo {
+  margin-bottom: 10px;
+}
+
+.site-logo .logo-img {
+  width: 64px;
+  height: 64px;
+  border-radius: 12px;
+}
+
 @media (max-width: 991px) {
   #header {
     width: 300px;
@@ -277,11 +287,49 @@ h6 {
   background: url("../img/sm.jpg") top right no-repeat;
   background-size: cover;
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding-bottom: 80px;
+}
+
+/* Ensure logo sticks to top-left inside hero */
+#hero > .hero-logo {
+  position: absolute;
+  top: 6px;
+  left: 60px;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+}
+
+#hero > .hero-logo .logo-img {
+  width: 120px;
+  height: 120px;
+  object-fit: contain;
+}
+
+#hero > .hero-logo .logo-link + .logo-link {
+  margin-left: 16px;
 }
 
 @media (min-width: 992px) {
   #hero {
     padding-left: 160px;
+  }
+}
+
+/* Mobile adjustments for logo positioning and size */
+@media (max-width: 576px) {
+  #hero > .hero-logo {
+    top: 8px;
+    left: 12px;
+    z-index: 20;
+  }
+
+  #hero > .hero-logo .logo-img {
+    width: 64px;
+    height: 64px;
   }
 }
 
@@ -335,6 +383,7 @@ h6 {
 @media (max-width: 992px) {
   #hero {
     text-align: center;
+    padding-bottom: 60px;
   }
 
   #hero h1 {

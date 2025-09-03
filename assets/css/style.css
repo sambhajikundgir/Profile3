@@ -331,6 +331,29 @@ h6 {
     width: 64px;
     height: 64px;
   }
+  
+  /* Mobile hero background image adjustments */
+  #hero {
+    background-position: center right;
+    background-size: cover;
+  }
+  
+  /* Mobile about section image adjustments */
+  .about .about-pic {
+    width: 100% !important;
+    height: auto !important;
+    margin: 0 auto 20px auto;
+    display: block;
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 768px) {
+  .about .about-pic {
+    width: 80% !important;
+    height: auto !important;
+    margin: 0 auto 20px auto;
+  }
 }
 
 #hero:before {
